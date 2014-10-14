@@ -10,3 +10,24 @@ def randomdata(size):
   
 def encrypt(str):
   return randomdata(1024)
+
+if __name__ == "__main__":
+    try:
+        print "Welcome to RNGcrypt!"
+      except:
+        print "Running under Python 2.x or earlier!"
+        def print (str):
+            print str
+      else:
+          print "Running under Python 3.x or later!"
+          
+    inp = input("Raw Text or File (t/f):")
+    if (inp == "t"): 
+      print(encrypt(input("Enter Raw Text: ")))
+    else if (inp == "f"):
+      try:
+        fp = open(input("Enter File Name: "))
+      except:
+        print("File failed to open")
+      else:
+        print(encrypt(fp.read()))
