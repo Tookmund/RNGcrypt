@@ -12,7 +12,7 @@ char[OUTPUTSIZE+2] randomdata (int size) {
   }
   return rnd;
 }
-int main (char* argv, int argc) {
+int main (char* argv[], int argc) {
   srand(time(NULL));
   if (argc < 1) {
     printf("%s -f filename or %s text",argv[0],argv[0]);
