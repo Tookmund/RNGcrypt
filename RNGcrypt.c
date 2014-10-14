@@ -2,17 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define OUTPUTSIZE 1024
 
-char[102] randomdata (int size) {
+char[OUTPUTSIZE+2] randomdata (int size) {
   int i;
-  char[102] rnd;
+  char[OUTPUTSIZE+2] rnd;
   for(i = 0; i <= 100; ++i) {
-    rnd[i] = (char)rand() % 200; 
-    /* 
-    Not skewed as GCC RAND_MAX is divisible by 200 
-    if not using GCC check on RAND_MAX
-    Maybe I will fix this to not depend on GCC
-    */
+    rnd[i] = (char)rand();
   }
   return rnd;
 }
@@ -23,6 +19,6 @@ int main (char* argv, int argc) {
     exit(0);
   }
   else {
-    printf("%s",randomdata(100));
+    printf("%s",randomdata(OUTPUTSIZE));
   }
   return 0;
