@@ -9,4 +9,4 @@ def randomdata(size):
   return ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(size))
   
 def encrypt(str):
-  return randomdata(100)
+  return randomdata(1024)
