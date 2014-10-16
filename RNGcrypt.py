@@ -20,12 +20,12 @@ def p(string):
 
 if __name__ == "__main__":
 
-  inp = input("Raw Text or File (t/f):")
+  inp = raw_input("Raw Text or File (t/f):")
   if (inp == "t"): 
-    p(encrypt(input("Enter Raw Text: ")))
+    p(encrypt(raw_input("Enter Raw Text: ")))
   elif (inp == "f"):
     try:
-      fp = open(input("Enter File Name: "))
+      fp = open(raw_input("Enter File Name: "))
     except:
       p("File failed to open")
     else:
