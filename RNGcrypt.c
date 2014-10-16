@@ -23,6 +23,10 @@ int main (int argc, char* argv[]) {
       perror(argv[2]);
       exit(EXIT_FAILURE);
     }
+    char x;
+    else if (fread(&x,1,1,fp) <= 0) {
+      perror("read file");
+      exit(EXIT_FAILURE);
   }
   int rnddata [OUTPUTSIZE+1]; 
   randomdata(OUTPUTSIZE);
