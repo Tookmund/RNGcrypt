@@ -19,11 +19,11 @@ int main (int argc, char* argv[]) {
   }
   if (argv[1] == "-f") {
     FILE* fp = fopen(argv[2],"r");
+    char x;
     if (fp == NULL) {
       perror(argv[2]);
       exit(EXIT_FAILURE);
     }
-    char x;
     else if (fread(&x,1,1,fp) <= 0) {
       perror("read file");
       exit(EXIT_FAILURE);
