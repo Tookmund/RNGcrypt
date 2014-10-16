@@ -6,7 +6,7 @@
 
 int* randomdata (int size) {
   int i;
-  int[OUTPUTSIZE+1] rnd;
+  int rnd [OUTPUTSIZE+1];
   for(i = 0; i <= size; ++i) {
     rnd[i] = (char)rand();
   }
@@ -21,13 +21,14 @@ int main (int argc, char* argv[]) {
   if (argv[1] == "-f") {
     FILE* fp = fopen(argv[2],"r");
     if (fp == NULL) {
-      perror("Unable to open %s",argv[2]);
+      perror(argv[2]);
       exit(EXIT_FAILURE);
     }
   }
   int i;
-  int[OUTPUTSIZE+1] rnddata = randomdata(OUTPUTSIZE);
+  int rnddata [OUTPUTSIZE+1] = randomdata(OUTPUTSIZE);
   for (i = 0; i <= OUTPUTSIZE; ++i) {
     printf("%X",rnddata[i]);
   }
-  exit(0);
+exit(0);
+}
