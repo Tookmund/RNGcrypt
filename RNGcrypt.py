@@ -2,13 +2,10 @@
 import string
 import random
 
-# Based on id_generator from http://stackoverflow.com/questions/2257441/random-string-generation-with-upper-case-letters-and-digits-in-python
-# def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
-#   return ''.join(random.choice(chars) for _ in range(size))
 def randomdata(size):
   randstr = ''
   for x in range(size):
-    randstr.join(random.choice('ABCDEF1234567890') for _ in range(10))
+    randstr.join(random.randrange(2147483647))
   return randstr
   
 def encrypt(string):
@@ -20,7 +17,7 @@ def p(string):
   #print(string)
 
 if __name__ == "__main__":
-
+  random.seed()
   inp = raw_input("Raw Text or File (t/f):")
   if (inp == "t"): 
     p(encrypt(raw_input("Enter Raw Text: ")))
@@ -30,4 +27,4 @@ if __name__ == "__main__":
     except:
       p("File failed to open")
     else:
-      p(encrypt(fp.read()))
+      p(hex(encrypt(fp.read())))
