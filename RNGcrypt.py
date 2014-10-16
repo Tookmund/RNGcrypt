@@ -9,6 +9,7 @@ def randomdata(size):
   randstr = ''
   for x in range(size):
     randstr.join(random.choice('ABCDEF1234567890') for _ in range(10))
+  return randstr
   
 def encrypt(string):
   return randomdata(1024)
