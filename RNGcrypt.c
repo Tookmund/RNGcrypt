@@ -7,7 +7,7 @@ int rnd [OUTPUTSIZE+1];
 int* randomdata (int size) {
   int i;
   for(i = 0; i <= size; ++i) {
-    rnd[i] = (char)rand();
+    rnd[i] = rand();
   }
   return rnd;
 }
