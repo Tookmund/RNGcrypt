@@ -5,7 +5,7 @@ import random
 def randomdata(size):
   randstr = ''
   for x in range(size):
-    randstr.join(random.randrange(2147483647))
+    randstr.join(str(random.randrange(2147483647)))
   return randstr
   
 def encrypt(string):
