@@ -6,9 +6,11 @@ import random
 # def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
 #   return ''.join(random.choice(chars) for _ in range(size))
 def randomdata(size):
-  return ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(size))
+  randstr = ''
+  for x in range(size):
+    randstr.join(random.choice('ABCDEF1234567890') for _ in range(10))
   
-def encrypt(str):
+def encrypt(string):
   return randomdata(1024)
 
 if __name__ == "__main__":
@@ -16,8 +18,8 @@ if __name__ == "__main__":
         print "Welcome to RNGcrypt!"
       except:
         print "Running under Python 2.x or earlier!"
-        def print (str):
-            print str
+        def print (string):
+            print string
       else:
           print "Running under Python 3.x or later!"
           
