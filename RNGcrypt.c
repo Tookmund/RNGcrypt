@@ -34,5 +34,5 @@ int main (int argc, char* argv[]) {
   for (i = 0; i <= OUTPUTSIZE; ++i) {
     printf("%X",rnd[i]);
   }
-exit(0);
+return(0);
 }
