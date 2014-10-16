@@ -25,11 +25,10 @@ int main (int argc, char* argv[]) {
     }
   }
   int rnddata [OUTPUTSIZE+1]; 
-  int* rndp = randomdata(OUTPUTSIZE);
-  rnddata = *rndp;
+  randomdata(OUTPUTSIZE);
   int i;
   for (i = 0; i <= OUTPUTSIZE; ++i) {
-    printf("%X",rnddata[i]);
+    printf("%X",rnd[i]);
   }
 exit(0);
 }
