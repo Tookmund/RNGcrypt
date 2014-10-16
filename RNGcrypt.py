@@ -5,7 +5,7 @@ import random
 def randomdata(size):
   randstr = ''
   for x in range(size):
-    randstr.join(str(random.randrange(2147483647)))
+    randstr.join(hex(random.randrange(2147483647)))
   return randstr
   
 def encrypt(string):
@@ -27,4 +27,4 @@ if __name__ == "__main__":
     except:
       p("File failed to open")
     else:
-      p(hex(encrypt(fp.read())))
+      p(encrypt(fp.read()))
