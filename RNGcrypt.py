@@ -16,12 +16,12 @@ def encrypt(string):
 if __name__ == "__main__":
     try:
         print "Welcome to RNGcrypt!"
-      except:
-        print "Running under Python 2.x or earlier!"
-        def print (string):
-            print string
-      else:
-          print "Running under Python 3.x or later!"
+    except:
+      print "Running under Python 2.x or earlier!"
+      def print (string):
+        print string
+    else:
+      print "Running under Python 3.x or later!"
           
     inp = input("Raw Text or File (t/f):")
     if (inp == "t"): 
