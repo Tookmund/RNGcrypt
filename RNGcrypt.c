@@ -4,21 +4,30 @@
 
 #define OUTPUTSIZE 1024
 
-char[OUTPUTSIZE+2] randomdata (int size) {
+int* randomdata (int size) {
   int i;
-  char[OUTPUTSIZE+2] rnd;
-  for(i = 0; i <= 100; ++i) {
+  int[OUTPUTSIZE+1] rnd;
+  for(i = 0; i <= size; ++i) {
     rnd[i] = (char)rand();
   }
   return rnd;
 }
-int main (char* argv[], int argc) {
+int main (int argc, char* argv[]) {
   srand(time(NULL));
   if (argc < 1) {
     printf("%s -f filename or %s text",argv[0],argv[0]);
     exit(0);
   }
-  else {
-    printf("%s",randomdata(OUTPUTSIZE));
+  if (argv[1] == "-f") {
+    FILE* fp = fopen(argv[2],"r");
+    if (fp == NULL) {
+      perror("Unable to open %s",argv[2]);
+      exit(EXIT_FAILURE);
+    }
   }
-  return 0;
+  int i;
+  int[OUTPUTSIZE+1] rnddata = randomdata(OUTPUTSIZE);
+  for (i = 0; i <= OUTPUTSIZE; ++i) {
+    printf("%X",rnddata[i]);
+  }
+  exit(0);
