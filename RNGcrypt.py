@@ -18,7 +18,7 @@ if __name__ == "__main__":
         print "Welcome to RNGcrypt!"
     except:
       print "Running under Python 2.x or earlier!"
-      def print (string):
+      def print(string):
         print string
     else:
       print "Running under Python 3.x or later!"
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     inp = input("Raw Text or File (t/f):")
     if (inp == "t"): 
       print(encrypt(input("Enter Raw Text: ")))
-    else if (inp == "f"):
+    elif (inp == "f"):
       try:
         fp = open(input("Enter File Name: "))
       except:
