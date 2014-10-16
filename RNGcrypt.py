@@ -13,19 +13,20 @@ def randomdata(size):
 def encrypt(string):
   return randomdata(1024)
 
-# comment out if using python 3
-def print (string):
+# ajust comments if using python 3
+def p(string):
   print string
+  #print(string)
 
 if __name__ == "__main__":
 
   inp = input("Raw Text or File (t/f):")
   if (inp == "t"): 
-    print(encrypt(input("Enter Raw Text: ")))
+    p(encrypt(input("Enter Raw Text: ")))
   elif (inp == "f"):
     try:
       fp = open(input("Enter File Name: "))
     except:
-      print("File failed to open")
+      p("File failed to open")
     else:
-      print(encrypt(fp.read()))
+      p(encrypt(fp.read()))
