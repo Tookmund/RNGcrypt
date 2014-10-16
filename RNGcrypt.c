@@ -24,7 +24,9 @@ int main (int argc, char* argv[]) {
       exit(EXIT_FAILURE);
     }
   }
-  int rnddata [OUTPUTSIZE+1] = randomdata(OUTPUTSIZE);
+  int rnddata [OUTPUTSIZE+1]; 
+  int* rndp = randomdata(OUTPUTSIZE);
+  rnddata = *rndp;
   int i;
   for (i = 0; i <= OUTPUTSIZE; ++i) {
     printf("%X",rnddata[i]);
