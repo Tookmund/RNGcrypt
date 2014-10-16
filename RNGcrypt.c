@@ -3,10 +3,9 @@
 #include <time.h>
 
 #define OUTPUTSIZE 1024
-
+int rnd [OUTPUTSIZE+1];
 int* randomdata (int size) {
   int i;
-  int rnd [OUTPUTSIZE+1];
   for(i = 0; i <= size; ++i) {
     rnd[i] = (char)rand();
   }
@@ -25,8 +24,8 @@ int main (int argc, char* argv[]) {
       exit(EXIT_FAILURE);
     }
   }
-  int i;
   int rnddata [OUTPUTSIZE+1] = randomdata(OUTPUTSIZE);
+  int i;
   for (i = 0; i <= OUTPUTSIZE; ++i) {
     printf("%X",rnddata[i]);
   }
