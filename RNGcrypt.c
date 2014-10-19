@@ -3,13 +3,14 @@
 #include <time.h>
 
 #define OUTPUTSIZE 1024
+
 int rnd [OUTPUTSIZE+1];
 int* randomdata (int size) {
-  int i;
-  for(i = 0; i <= size; ++i) {
-    rnd[i] = rand();
-  }
-  return rnd;
+	int i;
+	for(i = 0; i <= size; ++i) {
+		rnd[i] = rand();
+	}
+	return rnd;
 }
 
 int main (int argc, char* argv[]) {
