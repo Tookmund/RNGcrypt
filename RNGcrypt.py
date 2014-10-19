@@ -6,7 +6,7 @@ import sys
 def randomdata(size):
 	randstr = ''
 	for x in range(size):
-	randstr += hex(random.randrange(2147483647))
+		randstr += hex(random.randrange(2147483647))
 	return randstr
 	
 def encrypt():
@@ -21,7 +21,8 @@ if __name__ == "__main__":
 	random.seed()
 	inp = raw_input("Raw Text or File (t/f):")
 	if (inp == "t"): 
-		p(encrypt(raw_input("Enter Raw Text: ")))
+		raw_input("Enter Raw Text: ")
+		p(encrypt())
 	elif (inp == "f"):
 		try:
 			sys.stdout = open(raw_input("Enter File Name: ")+".rngc","r+")
