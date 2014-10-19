@@ -38,7 +38,7 @@ int main (int argc, char* argv[]) {
 			char rngname [NAME_MAX + 1];
 			strcpy(rngname,argv[2]);
 			strcat(rngname,rngc);
-			printf("%s\n",rngname);
+			//printf("%s\n",rngname);
 			freopen(rngname,"w+",stdout);
 		}
 	}
