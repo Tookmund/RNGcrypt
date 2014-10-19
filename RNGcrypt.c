@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 #define OUTPUTSIZE 1024
 
@@ -15,11 +16,12 @@ int* randomdata (int size) {
 
 int main (int argc, char* argv[]) {
 	 srand(time(NULL));
-	 if (argc < 1) {
-		printf("%s -f filename or %s text",argv[0],argv[0]);
+	 //printf("%d\n",argc);
+	 if (argc < 2) {
+		printf("%s -f filename or %s text\n",argv[0],argv[0]);
 		exit(0);
 	}
-	if (argv[1] == "-f") {
+	if (strcmp(argv[1],"-f") == 0) {
 		FILE* fp = fopen(argv[2],"r");
 		char x;
 		if (fp == NULL) {
@@ -31,11 +33,11 @@ int main (int argc, char* argv[]) {
 			exit(EXIT_FAILURE);
 		}
 	}
-	int rnddata [OUTPUTSIZE+1];
 	randomdata(OUTPUTSIZE);
 	int i;
 	for (i = 0; i <= OUTPUTSIZE; ++i) {
 		printf("%X",rnd[i]);
 	}
+	printf("\n");
 	return(0);
 }
