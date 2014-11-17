@@ -16,4 +16,3 @@ function rngcrypt (str) {
     console.log(decimalToHexString(ar[j]));
   }
 }
-console.read(rngcrypt);
