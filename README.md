@@ -1,8 +1,8 @@
 RNGcrypt
 ========
-
+### Status: Complete
 N.B. this should not be used on any important data! It is intended as a joke!
-
+Note for the pedants that no, this is not "true" encryption. But really, who cares?
 RNGcrypt is a state of the art encryption algorithm that is completely impossible to break!
 
 Features/Bugs:
